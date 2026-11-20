@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for alethia, covering Meta data access, local publishing records, storage, retention, and contact.">
+  <meta name="theme-color" content="#f5f6f2">
+  <title>Privacy policy — alethia</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="alethia legal home"><span class="brand-mark" aria-hidden="true">a<span>/</span></span><span class="brand-name">alethia <span>legal</span></span></a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html">Data deletion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container legal-layout">
+    <article class="legal-document">
+      <header class="document-heading">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Legal document · 01</p>
+        <h1>Privacy policy</h1>
+        <p class="document-intro">This policy explains what alethia processes when it manages social accounts with Meta APIs, what stays in the operator’s local environment, and how to contact the operator.</p>
+        <p class="updated">Effective date: <time datetime="2026-11-20">20 November 2026</time></p>
+      </header>
+
+      <section class="legal-section">
+        <h2>1. Who operates alethia</h2>
+        <p>alethia is a first-party automation application operated by Fadi Hanna for social accounts and Pages that the operator is authorized to manage. It is not a public social network, does not offer public registration, and is not a subscription service.</p>
+        <p>The application is used for authorized Facebook Page publishing and may support a linked Instagram professional account when that integration is configured and authorized. The Facebook Page currently designated for publishing is لورا الشام / Laura Alsham, Page ID <code>459938694047352</code>.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Information processed</h2>
+        <p>The information depends on the Meta permissions granted and the specific workflow being run. The application may process:</p>
+        <ul>
+          <li><strong>Page and account details:</strong> permitted identifiers and display names used to confirm the authorized destination. For Facebook, the publisher checks the Page token’s returned ID and name.</li>
+          <li><strong>Recent Facebook Page posts:</strong> when the bounded duplicate check is run, the publisher may request up to 25 recent published posts and their IDs, messages, and creation times. This check is limited and is not a scan of the Page’s full history.</li>
+          <li><strong>Publishing content and results:</strong> the text prepared for publication is sent to Meta when a post is submitted. The publisher records a SHA-256 content hash for duplicate prevention, a publication status, and the returned Meta post ID when available.</li>
+          <li><strong>Credentials:</strong> a Meta access token is read from operator-configured local files or environment variables so the application can make authorized API requests. The website does not ask visitors for tokens.</li>
+          <li><strong>Instagram information, if enabled:</strong> the linked professional account’s permitted identifier and account information, content submitted for publishing, and publication results may be processed according to the configured Meta permissions and API calls.</li>
+        </ul>
+        <p>The application uses this information to verify the authorized destination, perform the requested publishing workflow, prevent duplicate submissions, and record whether an attempt succeeded or needs manual review.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Where information is processed and stored</h2>
+        <p>The reviewed Facebook publishing workflow runs in the operator’s local environment and keeps its publishing ledger and reports in local files. The ledger records a content hash and publication state; a successful result can include the Meta post ID. The publisher is designed to sanitize its reports so access-token values are not written to them.</p>
+        <p>No alethia-hosted database or central account service was identified in the materials reviewed for this policy. Meta receives API requests, credentials needed to authorize those requests, and content submitted for publication. Meta independently processes and stores information under its own terms and policies.</p>
+        <p>This legal website is hosted by GitHub Pages. Its repository contains these public documents and site styling, not the automation’s credentials or publishing ledger. GitHub handles requests to its hosting service under its own terms and privacy practices. The site source uses no analytics, tracking scripts, external fonts, or third-party assets and sets no alethia application cookies.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Safeguards</h2>
+        <p>The Facebook publisher includes destination and duplicate-prevention checks: it is fixed to the authorized Page ID, verifies the Page identity before publishing, checks local publication records, requires an explicit interactive confirmation for a live post, records an in-flight state before submission, and does not automatically retry an uncertain post. Diagnostic modes are read-only.</p>
+        <p>Credentials are kept in the operator’s local configuration rather than this public website. Reports are sanitized. No dedicated encryption-at-rest system, cloud credential vault, or fixed local retention schedule was verified, so this policy does not claim one. The operator is responsible for restricting access to the local computer and credential files.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Retention and deletion</h2>
+        <p>No time-based deletion or fixed retention period is configured for local publication records. Local credentials, the publishing ledger, and reports may remain in the operator’s environment until the operator removes them or handles a deletion request. Removing access in Meta does not by itself remove local files, and deleting local files does not remove posts or records held by Meta.</p>
+        <p>To disconnect access and request deletion of applicable alethia-held data, follow the <a href="data-deletion.html">data deletion instructions</a>. Requests are handled manually; the reviewed materials do not include an automatic Meta data-deletion callback.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Other services</h2>
+        <p>Meta provides the social platforms and APIs used by alethia. GitHub provides hosting for this legal website. No other third-party service processing Meta account data was identified in the application materials reviewed for this policy. Meta and GitHub process information under their own terms and privacy notices.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Your choices and requests</h2>
+        <p>An authorized account operator can revoke alethia’s permissions in Meta settings. If you are an authorized person whose information may be held in alethia’s local records, you may ask the operator to explain what is held, correct an inaccurate record, or delete applicable local data. Rights available to you may also depend on your location and applicable law.</p>
+        <p>Contact the operator through the <a href="https://github.com/Fadi7anna/alethia-legal/issues/new">public project issue page</a>. Issues may be visible to anyone. Do not include personal information, access tokens, or private account details in a public issue; ask for a private contact channel instead.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Updates</h2>
+        <p>This policy may be updated if the application’s data practices change. The effective date at the top will be revised when a new version is published. If a change affects how Meta information is used, the operator should update the relevant Meta application settings and disclosures as needed.</p>
+      </section>
+    </article>
+
+    <aside class="legal-aside" aria-label="Policy details">
+      <div class="aside-card">
+        <p class="aside-kicker">Privacy at a glance</p>
+        <h2>Local workflow.<br>Meta platform.</h2>
+        <ul class="aside-list">
+          <li><span class="status-dot"></span><span>Credentials and publication ledger are handled in the operator’s local environment.</span></li>
+          <li><span class="status-dot"></span><span>Meta receives authorized API requests and submitted publishing content.</span></li>
+          <li><span class="status-dot"></span><span>No public alethia account registration or tracking scripts on this site.</span></li>
+        </ul>
+        <a class="aside-link" href="data-deletion.html">Deletion instructions <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="aside-contact">Questions about this policy?<br><a href="https://github.com/Fadi7anna/alethia-legal/issues/new">Contact the operator</a></p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">a<span>/</span></span><span class="brand-name">alethia <span>legal</span></span></a>
+      <p>First-party social publishing automation.</p>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html">Data deletion</a></nav>
+      <span class="copyright">© 2026 Fadi Hanna</span>
+    </div>
+  </footer>
+</body>
+</html>

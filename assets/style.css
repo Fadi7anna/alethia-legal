@@ -67,8 +67,9 @@ a:focus-visible, button:focus-visible {
 .brand-mark {
   width: 34px;
   height: 34px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 11px;
   background: var(--ink);
   color: white;
